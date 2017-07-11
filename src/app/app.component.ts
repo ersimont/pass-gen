@@ -20,8 +20,6 @@ export class AppComponent {
   public special = false;
   public show = false;
 
-  private timeoutId?: number;
-
   public getMessage() {
     if (!this.isConfirmed()) {
       return "Bad secret key";
@@ -37,10 +35,8 @@ export class AppComponent {
   }
 
   public copy() {
-    clearTimeout(this.timeoutId);
     copy(this.getPassword());
     this.secret = "";
-    this.timeoutId = setTimeout(() => { copy(""); }, 60000);
   }
 
   private getPassword() {

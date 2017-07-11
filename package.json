@@ -5,10 +5,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --output-path docs --base-href pass-gen",
+    "build": "ng build --prod --output-path docs --base-href pass-gen && npm run sw",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "sw": "sw-precache --root=docs --config=sw-precache-config.js",
+    "static-serve": "cd docs && live-server --port=4200 --host=localhost --entry-file=/index.html"
   },
   "private": true,
   "dependencies": {
@@ -43,7 +45,9 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "live-server": "^1.2.0",
     "protractor": "~5.1.2",
+    "sw-precache": "^5.2.0",
     "ts-node": "~3.0.4",
     "tslint": "^5.5.0",
     "typescript": "~2.3.3"

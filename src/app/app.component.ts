@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import {Component} from "@angular/core";
 import {Generator} from "./generator";
 import {copy} from "./browser-copy";
 
 const NUM_NORMAL_KEYS = 4;
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
   public iteree = Array(NUM_NORMAL_KEYS);

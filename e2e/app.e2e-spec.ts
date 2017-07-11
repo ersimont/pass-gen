@@ -1,6 +1,6 @@
 import { PwGenPage } from './app.po';
 
-describe('pw-gen App', () => {
+describe('pass-gen App', () => {
   let page: PwGenPage;
 
   beforeEach(() => {

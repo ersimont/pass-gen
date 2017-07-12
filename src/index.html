@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="theme-color" content="#0076c4">
   <title>Pass Gen</title>
-  <base href="/pass-gen/">
+  <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0076c4">
   <link rel="icon" type="image/x-icon" href="assets/icon-16.png">
   <link rel="manifest" href="assets/manifest.json">
 </head>
@@ -14,11 +13,6 @@
   <app-root>
     Looks like you don't have JavaScript enabled. There's nothing this site can do for you until you turn it on. :(
   </app-root>
-  <script>
-    document.querySelector("app-root").textContent = "Loading...";
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("service-worker.js");
-    }
-  </script>
+  <script>document.querySelector("app-root").textContent = "Loading...";</script>
 </body>
 </html>

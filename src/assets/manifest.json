@@ -35,7 +35,7 @@
       "sizes": "192x192"
     }
   ],
-  "start_url": "/pass-gen/index.html?launcher=true",
+  "start_url": "/pass-gen/index.html",
   "theme_color": "#0076c4",
   "background_color": "#FFFFFF",
   "lang": "en-US"

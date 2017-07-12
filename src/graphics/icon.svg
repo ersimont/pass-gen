@@ -9,62 +9,45 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="192"
-   height="192"
-   viewBox="0 0 192.00001 192.00001"
-   id="svg2"
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   id="svg4145"
    version="1.1"
    inkscape:version="0.91 r13725"
-   enable-background="new"
    sodipodi:docname="icon.svg"
-   inkscape:export-filename="S:\Programming\git repositories\pass-gen\src\assets\icon-48.png"
-   inkscape:export-xdpi="22.5"
-   inkscape:export-ydpi="22.5">
+   inkscape:export-filename="S:\Programming\git repositories\pass-gen\src\assets\icon-16.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
-     id="defs4">
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter4177">
-      <feBlend
-         inkscape:collect="always"
-         mode="multiply"
-         in2="BackgroundImage"
-         id="feBlend4179" />
-    </filter>
-  </defs>
+     id="defs4147" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#c6c6c6"
+     pagecolor="#e9e9e9"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="20.547111"
-     inkscape:cy="115.4405"
+     inkscape:zoom="31.678384"
+     inkscape:cx="1.4729658"
+     inkscape:cy="8.5042554"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="true"
      units="px"
-     objecttolerance="10000"
+     borderlayer="true"
      inkscape:window-width="1858"
      inkscape:window-height="1057"
      inkscape:window-x="1654"
      inkscape:window-y="1072"
-     inkscape:window-maximized="1"
-     borderlayer="true">
+     inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
-       id="grid4136"
-       enabled="true"
-       visible="true"
-       snapvisiblegridlinesonly="true"
-       spacingx="1.0000001"
+       id="grid4693"
        empspacing="4" />
   </sodipodi:namedview>
   <metadata
-     id="metadata7">
+     id="metadata4150">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -79,49 +62,30 @@
      inkscape:label="Background"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-860.3622)"
-     style="display:inline">
+     transform="translate(0,-1036.3622)">
     <rect
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect4148"
-       width="192.00002"
-       height="192"
+       id="rect4695"
+       width="16"
+       height="16"
        x="0"
-       y="860.36218"
-       ry="28.000019" />
+       y="1036.3622"
+       ry="3.0000174" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Text"
-     style="filter:url(#filter4177);opacity:1">
-    <flowRoot
+     inkscape:label="Text">
+    <text
        xml:space="preserve"
-       id="flowRoot4161"
-       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:180px;line-height:100%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Sans, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"><flowRegion
-         id="flowRegion4163"><rect
-           id="rect4165"
-           width="192.00002"
-           height="192"
-           x="0"
-           y="0"
-           style="-inkscape-font-specification:'Sans, Normal';font-family:Sans;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:180px;text-anchor:start;text-align:start;writing-mode:lr;line-height:100%" /></flowRegion><flowPara
-         id="flowPara4169" /></flowRoot>    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90.00000763px;line-height:100%;font-family:'Linux Libertine';-inkscape-font-specification:'Linux Libertine, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0076c4;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="97.428207"
-       y="79.951546"
-       id="text4171"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25px;line-height:100%;font-family:'Linux Libertine';-inkscape-font-specification:'Linux Libertine, Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0076c4;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="8.0609159"
+       y="11.649429"
+       id="text4698"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
-         id="tspan4173"
-         x="97.428207"
-         y="79.951546"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90.00000763px;line-height:100%;font-family:'Linux Libertine';-inkscape-font-specification:'Linux Libertine, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle">Pass</tspan><tspan
-         sodipodi:role="line"
-         x="97.428207"
-         y="169.95155"
-         id="tspan4175"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:90.00000763px;line-height:100%;font-family:'Linux Libertine';-inkscape-font-specification:'Linux Libertine, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle">Gen</tspan></text>
+         id="tspan4700"
+         x="8.0609159"
+         y="11.649429">PG</tspan></text>
   </g>
 </svg>

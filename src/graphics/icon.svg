@@ -44,7 +44,7 @@
      inkscape:cx="20.547111"
      inkscape:cy="115.4405"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
      objecttolerance="10000"
@@ -87,7 +87,8 @@
        width="192.00002"
        height="192"
        x="0"
-       y="860.36218" />
+       y="860.36218"
+       ry="28.000019" />
   </g>
   <g
      inkscape:groupmode="layer"

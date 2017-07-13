@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {Generator} from "./generator";
+import {Generator, LETTERS} from "./generator";
 import {copy} from "./browser-copy";
 
 const NUM_NORMAL_KEYS = 4;
@@ -41,9 +41,14 @@ export class AppComponent {
 
   private getPassword() {
     if (this.length && (this.letters || this.numbers || this.special)) {
-      return new Generator(
+      const generator = new Generator(
         this.letters, this.letters, this.numbers, this.special,
-      ).generate(this.length, this.keys.concat(this.secret));
+      );
+      if (this.letters && this.numbers) {
+        generator.addToFirst(LETTERS);
+        generator.addToLast(LETTERS);
+      }
+      return generator.generate(this.length, this.keys.concat(this.secret));
     } else {
       return "";
     }

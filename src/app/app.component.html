@@ -1,69 +1,82 @@
-<form (ngSubmit)="copy()">
-  <table>
-    <tr *ngFor="let _ of iteree; index as i">
-      <td><label for="key{{i}}">Key {{i + 1}}:</label></td>
-      <td>
-        <input
-          id="key{{i}}"
-          name="key{{i}}"
-          [(ngModel)]="keys[i]"
-          [autofocus]="i === 0"
+<mat-card>
+  <form (ngSubmit)="copy()">
+    <mat-list>
+      <ng-container *ngFor="let _ of iteree; index as i">
+        <mat-list-item>
+          <mat-form-field>
+            <input
+              matInput
+              name="key{{i}}"
+              placeholder="Key {{i + 1}}"
+              [(ngModel)]="keys[i]"
+              [autofocus]="i === 0"
+            >
+          </mat-form-field>
+        </mat-list-item>
+      </ng-container>
+      <mat-list-item>
+        <mat-form-field>
+          <input
+            matInput
+            type="password"
+            name="secret"
+            placeholder="Secret Key"
+            [(ngModel)]="secret"
+          >
+        </mat-form-field>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-form-field>
+          <input
+            matInput
+            type="password"
+            name="confirm"
+            placeholder="Confirm"
+            [(ngModel)]="confirm"
+          >
+        </mat-form-field>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-form-field>
+          <input
+            matInput
+            type="number"
+            name="length"
+            min="1"
+            placeholder="Length"
+            [(ngModel)]="length"
+          >
+        </mat-form-field>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-checkbox name="letters" [(ngModel)]="letters">
+          Include Letters
+        </mat-checkbox>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-checkbox name="numbers" [(ngModel)]="numbers">
+          Include Numbers
+        </mat-checkbox>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-checkbox name="special" [(ngModel)]="special">
+          Include Special Characters
+        </mat-checkbox>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-checkbox name="show" [(ngModel)]="show">
+          {{getMessage()}}
+        </mat-checkbox>
+        <div fxFlex></div>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!isConfirmed()"
         >
-      </td>
-    </tr>
-    <tr>
-      <td><label for="secret">Secret Key:</label></td>
-      <td>
-        <input type="password" id="secret" name="secret" [(ngModel)]="secret">
-      </td>
-    </tr>
-    <tr>
-      <td><label for="confirm">Confirm:</label></td>
-      <td>
-        <input
-          type="password"
-          id="confirm"
-          name="confirm"
-          [(ngModel)]="confirm"
-        >
-      </td>
-    </tr>
-    <tr>
-      <td><label for="length">Length:</label></td>
-      <td>
-        <input
-          type="number"
-          id="length"
-          name="length"
-          [(ngModel)]="length"
-          min="1"
-        >
-      </td>
-    </tr>
-  </table>
-  <div>
-    <label>
-      <input type="checkbox" name="letters" [(ngModel)]="letters">
-      Include Letters
-    </label>
-  </div>
-  <div>
-    <label>
-      <input type="checkbox" name="numbers" [(ngModel)]="numbers">
-      Include Numbers
-    </label>
-  </div>
-  <div>
-    <label>
-      <input type="checkbox" name="special" [(ngModel)]="special">
-      Include Special Characters
-    </label>
-  </div>
-  <div>
-    <label>
-      <input type="checkbox" name="show" [(ngModel)]="show">
-      {{getMessage()}}
-    </label>
-    <button type="submit" [disabled]="!isConfirmed()">Copy</button>
-  </div>
-</form>
+          Copy
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </form>
+</mat-card>

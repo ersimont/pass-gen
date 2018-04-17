@@ -82,10 +82,10 @@ export class Generator {
 
   private getHash(keys: string[]) {
     let hash = bigInt();
-    let multiplier = this.defaultUniverse.length - 1;
+    const multiplier = this.defaultUniverse.length - 1;
     for (const key of keys) {
       for (let i = 0; i < key.length; ++i) {
-        hash = hash.multiply(multiplier).add(key.codePointAt(i));
+        hash = hash.multiply(multiplier).add(key.codePointAt(i)!);
       }
     }
     return hash;

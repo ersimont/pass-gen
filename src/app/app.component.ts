@@ -37,6 +37,7 @@ export class AppComponent {
   public copy() {
     copy(this.getPassword());
     this.secret = "";
+    this.confirm = "";
   }
 
   private getPassword() {

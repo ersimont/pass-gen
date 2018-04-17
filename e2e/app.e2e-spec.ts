@@ -1,14 +1,14 @@
-import { PwGenPage } from './app.po';
+import { AppPage } from './app.po';
 
 describe('pass-gen App', () => {
-  let page: PwGenPage;
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new PwGenPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });

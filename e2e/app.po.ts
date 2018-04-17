@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class PwGenPage {
+export class AppPage {
   navigateTo() {
     return browser.get('/');
   }

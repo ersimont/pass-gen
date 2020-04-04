@@ -64,18 +64,19 @@
         </mat-checkbox>
       </mat-list-item>
       <mat-list-item>
-        <mat-checkbox name="show" [(ngModel)]="show">
-          {{ getMessage() }}
-        </mat-checkbox>
-        <div fxFlex></div>
-        <button
-          mat-raised-button
-          color="primary"
-          type="submit"
-          [disabled]="!isConfirmed()"
-        >
-          Copy
-        </button>
+        <div class="spreader">
+          <mat-checkbox name="show" [(ngModel)]="show">
+            {{ getMessage() }}
+          </mat-checkbox>
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="!isConfirmed()"
+          >
+            Copy
+          </button>
+        </div>
       </mat-list-item>
     </mat-list>
   </form>

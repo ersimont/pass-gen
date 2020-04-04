@@ -11,14 +11,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    FlexLayoutModule,
     FormsModule,
     MatButtonModule,
     MatCardModule,
@@ -30,7 +28,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
       enabled: environment.production,
     }),
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

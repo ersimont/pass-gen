@@ -1,2 +1,1 @@
-- focus first input on init
 - change to [bigint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) if browser support improves

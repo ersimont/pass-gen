@@ -7,7 +7,7 @@ const NUM_NORMAL_KEYS = 4;
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
   public iteree = Array(NUM_NORMAL_KEYS);

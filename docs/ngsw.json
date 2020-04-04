@@ -1,0 +1,80 @@
+{
+  "configVersion": 1,
+  "timestamp": 1585998565640,
+  "index": "pass-gen/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "pass-gen/favicon.png",
+        "pass-gen/index.html",
+        "pass-gen/main-es2015.1d0a76516d12d92d7069.js",
+        "pass-gen/main-es5.1d0a76516d12d92d7069.js",
+        "pass-gen/manifest.webmanifest",
+        "pass-gen/polyfills-es2015.690002c25ea8557bb4b0.js",
+        "pass-gen/polyfills-es5.1fd9b76218eca8053895.js",
+        "pass-gen/runtime-es2015.1eba213af0b233498d9d.js",
+        "pass-gen/runtime-es5.1eba213af0b233498d9d.js",
+        "pass-gen/styles.ea2d9b70b66a45026665.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "pass-gen/assets/icons/icon-128x128.png",
+        "pass-gen/assets/icons/icon-144x144.png",
+        "pass-gen/assets/icons/icon-152x152.png",
+        "pass-gen/assets/icons/icon-192x192.png",
+        "pass-gen/assets/icons/icon-384x384.png",
+        "pass-gen/assets/icons/icon-512x512.png",
+        "pass-gen/assets/icons/icon-72x72.png",
+        "pass-gen/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "pass-gen/assets/icons/icon-128x128.png": "a2b4f4b4182ba1f0c76cb5e483d41b8147cb4f23",
+    "pass-gen/assets/icons/icon-144x144.png": "0f382cfd9babf8c0ce35b9634ff3be6b2b782303",
+    "pass-gen/assets/icons/icon-152x152.png": "c136f879d7e849a59f70f6916721ae79fdfbc727",
+    "pass-gen/assets/icons/icon-192x192.png": "d43c01d96210b75c0a967d50757423af6649e634",
+    "pass-gen/assets/icons/icon-384x384.png": "5e8c2118ef901535f238808821d2c431cb9e5039",
+    "pass-gen/assets/icons/icon-512x512.png": "feee404658f2de66317d904dc4b4c4d05bf4bef5",
+    "pass-gen/assets/icons/icon-72x72.png": "1ff52347da404c2a4e79ea2fb48b8213d4cbf90c",
+    "pass-gen/assets/icons/icon-96x96.png": "63f3a1ccdb7e6a8e9386fee3980228e15623fa69",
+    "pass-gen/favicon.png": "ff0782570c2c437642cea7c7f8dc4f89cff73381",
+    "pass-gen/index.html": "99bfbed6ac722f3e43435e4c59a5fb04f6c08a62",
+    "pass-gen/main-es2015.1d0a76516d12d92d7069.js": "6ceb48225f105f1c4475dc9f09f0d5ead608745e",
+    "pass-gen/main-es5.1d0a76516d12d92d7069.js": "a1c2450be176b5da09dda35c11dd76cd5363ba52",
+    "pass-gen/manifest.webmanifest": "318166fb5b1df5cd6c284ecae711b6f9154cc3be",
+    "pass-gen/polyfills-es2015.690002c25ea8557bb4b0.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
+    "pass-gen/polyfills-es5.1fd9b76218eca8053895.js": "e51a1de4f016cd689dbdbef51043dec9518c4111",
+    "pass-gen/runtime-es2015.1eba213af0b233498d9d.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "pass-gen/runtime-es5.1eba213af0b233498d9d.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "pass-gen/styles.ea2d9b70b66a45026665.css": "348be5020c30fdb25d3c85123db02f14468f22a7"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

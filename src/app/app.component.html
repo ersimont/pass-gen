@@ -6,11 +6,11 @@
           <mat-form-field>
             <input
               matInput
-              name="key{{i}}"
-              placeholder="Key {{i + 1}}"
+              name="key{{ i }}"
+              placeholder="Key {{ i + 1 }}"
               [(ngModel)]="keys[i]"
               [autofocus]="i === 0"
-            >
+            />
           </mat-form-field>
         </mat-list-item>
       </ng-container>
@@ -22,7 +22,7 @@
             name="secret"
             placeholder="Secret Key"
             [(ngModel)]="secret"
-          >
+          />
         </mat-form-field>
       </mat-list-item>
       <mat-list-item>
@@ -33,7 +33,7 @@
             name="confirm"
             placeholder="Confirm"
             [(ngModel)]="confirm"
-          >
+          />
         </mat-form-field>
       </mat-list-item>
       <mat-list-item>
@@ -45,7 +45,7 @@
             min="1"
             placeholder="Length"
             [(ngModel)]="length"
-          >
+          />
         </mat-form-field>
       </mat-list-item>
       <mat-list-item>
@@ -65,7 +65,7 @@
       </mat-list-item>
       <mat-list-item>
         <mat-checkbox name="show" [(ngModel)]="show">
-          {{getMessage()}}
+          {{ getMessage() }}
         </mat-checkbox>
         <div fxFlex></div>
         <button

@@ -1,13 +1,15 @@
-import {BigInteger} from "big-integer";
+import { BigInteger } from 'big-integer';
 
 export class PasswordInProgress {
-  public password = "";
+  public password = '';
 
   constructor(private hash: BigInteger) {}
 
   public insertFrom(universe: string, position = this.password.length) {
     this.password = stringInsert(
-      this.password, position, universe[this.takeInt(universe.length)],
+      this.password,
+      position,
+      universe[this.takeInt(universe.length)],
     );
   }
 

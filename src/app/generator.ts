@@ -1,17 +1,17 @@
-import * as bigInt from "big-integer";
-import {PasswordInProgress} from "./password-in-progress";
+import * as bigInt from 'big-integer';
+import { PasswordInProgress } from './password-in-progress';
 
-export const UPPER_CASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-export const LOWER_CASE = "abcdefghijklmnopqrstuvwxyz";
-export const DIGITS = "0123456789";
+export const UPPER_CASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+export const LOWER_CASE = 'abcdefghijklmnopqrstuvwxyz';
+export const DIGITS = '0123456789';
 export const LETTERS = UPPER_CASE + LOWER_CASE;
 export const LETTERS_AND_DIGITS = LETTERS + DIGITS;
-export const SPECIAL_CHARACTERS = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+export const SPECIAL_CHARACTERS = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 
 export class Generator {
-  private defaultUniverse = "";
-  private firstUniverse = "";
-  private lastUniverse = "";
+  private defaultUniverse = '';
+  private firstUniverse = '';
+  private lastUniverse = '';
   private required: string[] = [];
 
   constructor(
@@ -62,7 +62,7 @@ export class Generator {
     if (this.lastUniverse.length > 0) {
       --length;
     }
-    for (let i = length - this.required.length; --i >= 0;) {
+    for (let i = length - this.required.length; --i >= 0; ) {
       inProg.insertFrom(this.defaultUniverse);
     }
     for (const universe of this.required) {

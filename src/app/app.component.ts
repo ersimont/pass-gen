@@ -1,19 +1,19 @@
-import {Component} from "@angular/core";
-import {Generator, LETTERS} from "./generator";
-import {copy} from "./browser-copy";
+import { Component } from '@angular/core';
+import { Generator, LETTERS } from './generator';
+import { copy } from './browser-copy';
 
 const NUM_NORMAL_KEYS = 4;
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   public iteree = Array(NUM_NORMAL_KEYS);
-  public keys = Array(NUM_NORMAL_KEYS).fill("");
-  public secret = "";
-  public confirm = "";
+  public keys = Array(NUM_NORMAL_KEYS).fill('');
+  public secret = '';
+  public confirm = '';
   public length = 12;
   public letters = true;
   public numbers = true;
@@ -22,11 +22,11 @@ export class AppComponent {
 
   public getMessage() {
     if (!this.isConfirmed()) {
-      return "Bad secret key";
+      return 'Bad secret key';
     } else if (this.show) {
       return this.getPassword();
     } else {
-      return "Show password";
+      return 'Show password';
     }
   }
 
@@ -36,14 +36,17 @@ export class AppComponent {
 
   public copy() {
     copy(this.getPassword());
-    this.secret = "";
-    this.confirm = "";
+    this.secret = '';
+    this.confirm = '';
   }
 
   private getPassword() {
     if (this.length && (this.letters || this.numbers || this.special)) {
       const generator = new Generator(
-        this.letters, this.letters, this.numbers, this.special,
+        this.letters,
+        this.letters,
+        this.numbers,
+        this.special,
       );
       if (this.letters && this.numbers) {
         generator.addToFirst(LETTERS);
@@ -51,7 +54,7 @@ export class AppComponent {
       }
       return generator.generate(this.length, this.keys.concat(this.secret));
     } else {
-      return "";
+      return '';
     }
   }
 }

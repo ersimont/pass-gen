@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { Generator, LETTERS } from './generator';
 import { copy } from './browser-copy';
 
@@ -10,17 +10,24 @@ const NUM_NORMAL_KEYS = 4;
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public iteree = Array(NUM_NORMAL_KEYS);
-  public keys = Array(NUM_NORMAL_KEYS).fill('');
-  public secret = '';
-  public confirm = '';
-  public length = 12;
-  public letters = true;
-  public numbers = true;
-  public special = false;
-  public show = false;
+  iteree = Array(NUM_NORMAL_KEYS);
+  keys = Array(NUM_NORMAL_KEYS).fill('');
+  secret = '';
+  confirm = '';
+  length = 12;
+  letters = true;
+  numbers = true;
+  special = false;
+  show = false;
 
-  public getMessage() {
+  @ViewChildren('input')
+  set inputs(refs: QueryList<ElementRef>) {
+    setTimeout(() => {
+      refs.first.nativeElement.focus();
+    });
+  }
+
+  getMessage() {
     if (!this.isConfirmed()) {
       return 'Bad secret key';
     } else if (this.show) {
@@ -30,11 +37,11 @@ export class AppComponent {
     }
   }
 
-  public isConfirmed() {
+  isConfirmed() {
     return this.confirm.length === 0 || this.confirm == this.secret;
   }
 
-  public copy() {
+  copy() {
     copy(this.getPassword());
     this.secret = '';
     this.confirm = '';

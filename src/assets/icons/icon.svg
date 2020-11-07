@@ -16,9 +16,9 @@
    version="1.1"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="icon.svg"
-   inkscape:export-filename="C:\Users\xemno\IdeaProjects\pass-gen\src\assets\icons\icon-72x72.png"
-   inkscape:export-xdpi="432"
-   inkscape:export-ydpi="432">
+   inkscape:export-filename="C:\Users\xemno\Dropbox\Wallpapers\pass-gen.png"
+   inkscape:export-xdpi="6480.0005"
+   inkscape:export-ydpi="6480.0005">
   <defs
      id="defs4147" />
   <sodipodi:namedview
@@ -36,13 +36,14 @@
      showgrid="true"
      units="px"
      borderlayer="true"
-     inkscape:window-width="1856"
+     inkscape:window-width="2496"
      inkscape:window-height="1057"
-     inkscape:window-x="56"
+     inkscape:window-x="1976"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
-     inkscape:snap-bbox-edge-midpoints="true">
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:pagecheckerboard="true">
     <inkscape:grid
        type="xygrid"
        id="grid4693"
@@ -58,7 +59,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -66,7 +67,8 @@
      inkscape:label="Background"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-1036.3622)">
+     transform="translate(0,-1036.3622)"
+     style="display:inline">
     <rect
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4695"
@@ -82,14 +84,14 @@
      inkscape:label="Text">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Linux Libertine';-inkscape-font-specification:'Linux Libertine, Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0076c4;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="8.0339766"
-       y="11.082031"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:0%;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0076c4;fill-opacity:1;stroke:none;stroke-width:1.07702267px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="7.9583335"
+       y="11.895833"
        id="text4698"><tspan
          sodipodi:role="line"
          id="tspan4700"
-         x="8.0339766"
-         y="11.082031"
-         style="font-size:10px;line-height:1">PG</tspan></text>
+         x="7.9583335"
+         y="11.895833"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.66666698px;line-height:1;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:1.07702267px">PG</tspan></text>
   </g>
 </svg>

@@ -42,7 +42,7 @@ export class AppComponent {
   }
 
   copy(): void {
-    copy(this.getPassword());
+    navigator.clipboard.writeText(this.getPassword());
     this.secret = '';
     this.confirm = '';
   }

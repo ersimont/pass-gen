@@ -1,11 +1,11 @@
 import { BigInteger } from 'big-integer';
 
 export class PasswordInProgress {
-  public password = '';
+  password = '';
 
   constructor(private hash: BigInteger) {}
 
-  public insertFrom(universe: string, position = this.password.length) {
+  insertFrom(universe: string, position = this.password.length): void {
     this.password = stringInsert(
       this.password,
       position,
@@ -13,13 +13,13 @@ export class PasswordInProgress {
     );
   }
 
-  public takeInt(maxPlusOne: number) {
+  takeInt(maxPlusOne: number): number {
     const int = this.hash.mod(maxPlusOne).toJSNumber();
     this.hash = this.hash.divide(maxPlusOne);
     return int;
   }
 }
 
-function stringInsert(string: string, position: number, toInsert: string) {
-  return string.slice(0, position) + toInsert + string.slice(position);
+function stringInsert(s: string, position: number, toInsert: string): string {
+  return s.slice(0, position) + toInsert + s.slice(position);
 }

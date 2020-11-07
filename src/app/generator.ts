@@ -34,27 +34,24 @@ export class Generator {
     }
   }
 
-  // ////////////////////////////////////////////////////////////////////////
-  // ///////////////////////////////////////////////////////// public methods
-
   /**
    * For each call to this method, at least one from the characters passed in
    * will be included in the password.
    */
-  public addToDefault(characters: string) {
+  addToDefault(characters: string): void {
     this.defaultUniverse += characters;
     this.required.push(characters);
   }
 
-  public addToFirst(characters: string) {
+  addToFirst(characters: string): void {
     this.firstUniverse += characters;
   }
 
-  public addToLast(characters: string) {
+  addToLast(characters: string): void {
     this.lastUniverse += characters;
   }
 
-  public generate(length: number, keys: string[]) {
+  generate(length: number, keys: string[]): string {
     const inProg = new PasswordInProgress(this.getHash(keys));
     if (this.firstUniverse.length > 0) {
       --length;
@@ -77,10 +74,7 @@ export class Generator {
     return inProg.password;
   }
 
-  // ////////////////////////////////////////////////////////////////////////
-  // //////////////////////////////////////////////////////// private methods
-
-  private getHash(keys: string[]) {
+  private getHash(keys: string[]): any {
     let hash = bigInt();
     const multiplier = this.defaultUniverse.length - 1;
     for (const key of keys) {

@@ -1,5 +1,5 @@
 // https://stackoverflow.com/a/43202252/1836506
-export function copy(val: string) {
+export function copy(val: string): void {
   const selBox = document.createElement('textarea');
 
   selBox.style.position = 'fixed';

@@ -27,7 +27,7 @@ export class AppComponent {
     });
   }
 
-  getMessage() {
+  getMessage(): string {
     if (!this.isConfirmed()) {
       return 'Bad secret key';
     } else if (this.show) {
@@ -37,17 +37,17 @@ export class AppComponent {
     }
   }
 
-  isConfirmed() {
-    return this.confirm.length === 0 || this.confirm == this.secret;
+  isConfirmed(): boolean {
+    return this.confirm.length === 0 || this.confirm === this.secret;
   }
 
-  copy() {
+  copy(): void {
     copy(this.getPassword());
     this.secret = '';
     this.confirm = '';
   }
 
-  private getPassword() {
+  private getPassword(): string {
     if (this.length && (this.letters || this.numbers || this.special)) {
       const generator = new Generator(
         this.letters,

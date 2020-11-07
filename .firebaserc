@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "simonton-pass-gen": {
+      "hosting": {
+        "pass-gen": [
+          "simonton-pass-gen"
+        ]
+      }
+    }
+  }
+}

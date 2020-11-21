@@ -1,14 +1,20 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "cli": {
+    "packageManager": "yarn",
+    "analytics": "213e457a-ea23-4ef4-9b7a-0498cde0e2e0"
+  },
   "newProjectRoot": "projects",
   "projects": {
     "pass-gen": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "strict": true,
           "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "",
@@ -127,8 +133,5 @@
       }
     }
   },
-  "defaultProject": "pass-gen",
-  "cli": {
-    "analytics": "213e457a-ea23-4ef4-9b7a-0498cde0e2e0"
-  }
+  "defaultProject": "pass-gen"
 }

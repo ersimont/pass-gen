@@ -1,6 +1,5 @@
 import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { Generator, LETTERS } from './generator';
-import { copy } from './browser-copy';
 
 const NUM_NORMAL_KEYS = 4;
 

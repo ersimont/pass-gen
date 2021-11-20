@@ -113,9 +113,9 @@
           "options": {
             "prerender": false,
             "ssr": false,
-            "browserTarget": "the-project:build:production",
-            "firebaseProject": "private-bounce",
-            "firebaseHostingSite": "private-bounce"
+            "browserTarget": "pass-gen:build:production",
+            "firebaseProject": "simonton-pass-gen",
+            "firebaseHostingSite": "simonton-pass-gen"
           }
         }
       }

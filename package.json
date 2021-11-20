@@ -10,7 +10,7 @@
     "test": "ng test",
     "deploy": "ng deploy",
     "prettier-all": "prettier --write \"**/*.{css,html,js,json,md,scss,ts,yml}\"",
-    "source-map-explorer": "ng build --configuration production --source-map && source-map-explorer 'dist/pass-gen/*.js'"
+    "source-map-explorer": "ng build --source-map && source-map-explorer 'dist/pass-gen/*.js'"
   },
   "private": true,
   "dependencies": {

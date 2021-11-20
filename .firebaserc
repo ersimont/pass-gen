@@ -9,6 +9,6 @@
     }
   },
   "projects": {
-    "default": "private-bounce"
+    "default": "simonton-pass-gen"
   }
 }

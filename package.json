@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng deploy",
-    "prettier-all": "prettier --write \"**/*.{css,html,js,json,md,scss,ts,yml}\""
+    "prettier-all": "prettier --write \"**/*.{css,html,js,json,md,scss,ts,yml}\"",
+    "source-map-explorer": "ng build --prod --source-map && source-map-explorer 'dist/pass-gen/*.js'"
   },
   "private": true,
   "dependencies": {

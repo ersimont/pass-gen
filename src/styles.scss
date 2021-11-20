@@ -32,11 +32,7 @@ $pass-gen-dark-theme: mat-dark-theme(
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-//@include angular-material-theme($pass-gen-theme);
-@media (prefers-color-scheme: light) {
-  @include angular-material-theme($pass-gen-light-theme);
-}
-
+@include angular-material-theme($pass-gen-light-theme);
 @media (prefers-color-scheme: dark) {
   @include angular-material-theme($pass-gen-dark-theme);
 }

@@ -1,4 +1,3 @@
-import * as bigInt from 'big-integer';
 import { PasswordInProgress } from './password-in-progress';
 
 export const UPPER_CASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -52,7 +51,7 @@ export class Generator {
   }
 
   generate(length: number, keys: string[]): string {
-    const inProg = new PasswordInProgress(this.getHash(keys));
+    const inProg = new PasswordInProgress(this.#getHash(keys));
     if (this.firstUniverse.length > 0) {
       --length;
     }
@@ -74,12 +73,12 @@ export class Generator {
     return inProg.password;
   }
 
-  private getHash(keys: string[]): any {
-    let hash = bigInt();
-    const multiplier = this.defaultUniverse.length - 1;
+  #getHash(keys: string[]): bigint {
+    let hash = 0n;
+    const multiplier = BigInt(this.defaultUniverse.length - 1);
     for (const key of keys) {
       for (let i = 0; i < key.length; ++i) {
-        hash = hash.multiply(multiplier).add(key.codePointAt(i)!);
+        hash = hash * multiplier + BigInt(key.codePointAt(i)!);
       }
     }
     return hash;

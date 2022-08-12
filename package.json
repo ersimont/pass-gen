@@ -30,7 +30,6 @@
     "@s-libs/micro-dash": "^14.0.0",
     "@s-libs/ng-core": "^14.0.0",
     "@s-libs/rxjs-core": "^14.0.0",
-    "big-integer": "^1.6.48",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

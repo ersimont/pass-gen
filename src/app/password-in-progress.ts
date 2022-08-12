@@ -1,9 +1,7 @@
-import { BigInteger } from 'big-integer';
-
 export class PasswordInProgress {
   password = '';
 
-  constructor(private hash: BigInteger) {}
+  constructor(private hash: bigint) {}
 
   insertFrom(universe: string, position = this.password.length): void {
     this.password = stringInsert(
@@ -14,8 +12,9 @@ export class PasswordInProgress {
   }
 
   takeInt(maxPlusOne: number): number {
-    const int = this.hash.mod(maxPlusOne).toJSNumber();
-    this.hash = this.hash.divide(maxPlusOne);
+    const factor = BigInt(maxPlusOne);
+    const int = Number(this.hash % factor);
+    this.hash /= factor;
     return int;
   }
 }

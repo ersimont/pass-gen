@@ -1,8 +1,8 @@
 import { ComponentHarnessSuperclass } from '@s-libs/ng-dev';
 import { AppContext } from '../spec-helpers/app-context';
-import { MatLegacyButtonHarness as MatButtonHarness } from '@angular/material/legacy-button/testing';
-import { MatLegacyInputHarness as MatInputHarness } from '@angular/material/legacy-input/testing';
-import { MatLegacyCheckboxHarness as MatCheckboxHarness } from '@angular/material/legacy-checkbox/testing';
+import { MatButtonHarness } from '@angular/material/button/testing';
+import { MatInputHarness } from '@angular/material/input/testing';
+import { MatCheckboxHarness } from '@angular/material/checkbox/testing';
 
 export class AppComponentHarness extends ComponentHarnessSuperclass {
   static hostSelector = 'app-root';

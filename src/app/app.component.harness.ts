@@ -8,15 +8,15 @@ export class AppComponentHarness extends ComponentHarnessSuperclass {
   static hostSelector = 'app-root';
 
   async setKey(number: number, value: string): Promise<void> {
-    await this.#setInput(`Key ${number}`, value);
+    await this.#setInput(`key${number - 1}`, value);
   }
 
   async setSecret(value: string): Promise<void> {
-    await this.#setInput('Secret Key', value);
+    await this.#setInput('secret', value);
   }
 
   async setLength(length: number): Promise<void> {
-    await this.#setInput('Length', String(length));
+    await this.#setInput('length', String(length));
   }
 
   async toggle(label: string): Promise<void> {
@@ -35,8 +35,10 @@ export class AppComponentHarness extends ComponentHarnessSuperclass {
     return password;
   }
 
-  async #setInput(placeholder: string, value: string): Promise<void> {
-    const key = await this.getHarness(MatInputHarness.with({ placeholder }));
+  async #setInput(name: string, value: string): Promise<void> {
+    const key = await this.getHarness(
+      MatInputHarness.with({ selector: `[name="${name}"]` }),
+    );
     await key.setValue(value);
   }
 }

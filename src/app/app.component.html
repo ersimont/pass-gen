@@ -41,7 +41,7 @@
         </mat-checkbox>
       </div>
       <div class="spreader">
-        <mat-checkbox name="show" [(ngModel)]="show">
+        <mat-checkbox name="show" [class.mono-box]="show" [(ngModel)]="show">
           {{ getMessage() }}
         </mat-checkbox>
         <button

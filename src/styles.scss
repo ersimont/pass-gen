@@ -31,8 +31,8 @@ $theme-config: (
 
 body {
   height: 100vh;
-  margin: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
+
+  display: grid;
+  place-items: center;
 }

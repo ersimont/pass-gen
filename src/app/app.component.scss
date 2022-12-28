@@ -1,6 +1,5 @@
 mat-card {
   max-width: 400px;
-  margin: auto;
 }
 
 mat-form-field {
@@ -12,8 +11,4 @@ mat-form-field {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-}
-
-.shown {
-  font-family: monospace;
 }

@@ -10,7 +10,14 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": true
+        },
+        "@schematics/angular:directive": {
+          "standalone": true
+        },
+        "@schematics/angular:pipe": {
+          "standalone": true
         }
       },
       "root": "",
@@ -99,11 +106,8 @@
         "deploy": {
           "builder": "@angular/fire:deploy",
           "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "pass-gen:build:production",
-            "firebaseProject": "simonton-pass-gen",
-            "firebaseHostingSite": "simonton-pass-gen"
+            "version": 2,
+            "browserTarget": "pass-gen:build:production"
           }
         }
       }

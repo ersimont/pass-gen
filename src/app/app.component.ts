@@ -1,10 +1,29 @@
 import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { Generator, LETTERS } from './generator';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { NgForOf } from '@angular/common';
 
 const NUM_NORMAL_KEYS = 4;
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [
+    FormsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatListModule,
+    NgForOf,
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

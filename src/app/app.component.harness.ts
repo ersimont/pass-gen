@@ -30,7 +30,7 @@ export class AppComponentHarness extends ComponentHarnessSuperclass {
     const call = AppContext.getCurrent().writeTextController.expectOne(
       () => true,
     );
-    let password = call.callInfo.args[0];
+    const password = call.callInfo.args[0];
     call.flush();
     return password;
   }

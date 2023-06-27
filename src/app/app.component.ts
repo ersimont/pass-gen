@@ -49,7 +49,7 @@ export class AppComponent {
     if (!this.isConfirmed()) {
       return 'Bad secret key';
     } else if (this.show) {
-      return this.getPassword();
+      return this.#getPassword();
     } else {
       return 'Show password';
     }
@@ -60,26 +60,30 @@ export class AppComponent {
   }
 
   copy(): void {
-    navigator.clipboard.writeText(this.getPassword());
+    navigator.clipboard.writeText(this.#getPassword());
     this.secret = '';
     this.confirm = '';
   }
 
-  private getPassword(): string {
-    if (this.length && (this.letters || this.numbers || this.special)) {
-      const generator = new Generator(
-        this.letters,
-        this.letters,
-        this.numbers,
-        this.special,
-      );
-      if (this.letters && this.numbers) {
-        generator.addToFirst(LETTERS);
-        generator.addToLast(LETTERS);
-      }
-      return generator.generate(this.length, this.keys.concat(this.secret));
-    } else {
+  #getPassword(): string {
+    if (!this.#shouldGen()) {
       return '';
     }
+
+    const generator = new Generator(
+      this.letters,
+      this.letters,
+      this.numbers,
+      this.special,
+    );
+    if (this.letters && this.numbers) {
+      generator.addToFirst(LETTERS);
+      generator.addToLast(LETTERS);
+    }
+    return generator.generate(this.length, this.keys.concat(this.secret));
+  }
+
+  #shouldGen(): boolean {
+    return this.length > 0 && (this.letters || this.numbers || this.special);
   }
 }

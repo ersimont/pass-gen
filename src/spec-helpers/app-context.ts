@@ -1,6 +1,5 @@
 import { AsyncMethodController, ComponentContext } from '@s-libs/ng-dev';
 import { AppComponent } from '../app/app.component';
-import { AppModule } from '../app/app.module';
 import { assert } from '@s-libs/js-core';
 
 export class AppContext extends ComponentContext<AppComponent> {
@@ -16,6 +15,6 @@ export class AppContext extends ComponentContext<AppComponent> {
   );
 
   constructor() {
-    super(AppComponent, { imports: [AppModule] });
+    super(AppComponent);
   }
 }

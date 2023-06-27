@@ -1,17 +1,16 @@
 @use "@angular/material" as mat;
-@use "to-replace/ng-mat-core/theming" as slibs;
+@use "node_modules/@s-libs/ng-mat-core/theming";
 
-$theme-config: (
-  dark-color: (
+@include theming.full-theming(
+  $dark-palettes: (
     primary: mat.define-palette(mat.$light-blue-palette),
     accent: mat.define-palette(mat.$orange-palette, A200, A100, A400),
   ),
-  light-color: (
+  $light-palettes: (
     primary: mat.define-palette(mat.$blue-palette),
     accent: mat.define-palette(mat.$orange-palette, A400, A200, A700),
   ),
-  typography: mat.define-typography-config("sans-serif"),
-  modules: (
+  $modules: (
     "core",
     "button",
     "card",
@@ -19,9 +18,8 @@ $theme-config: (
     "form-field",
     "input",
     "list",
-  ),
+  )
 );
-@include slibs.full-theming($theme-config);
 
 .mono-box {
   @include mat.checkbox-typography(

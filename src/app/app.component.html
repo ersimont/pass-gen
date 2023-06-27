@@ -40,8 +40,8 @@
           Include Special Characters
         </mat-checkbox>
       </div>
-      <div class="spreader">
-        <mat-checkbox name="show" [class.mono-box]="show" [(ngModel)]="show">
+      <div class="spreader" [class.mono-box]="show">
+        <mat-checkbox name="show" [(ngModel)]="show">
           {{ getMessage() }}
         </mat-checkbox>
         <button

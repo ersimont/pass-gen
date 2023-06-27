@@ -26,10 +26,10 @@
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
     "@angular/service-worker": "^16.1.0",
-    "@s-libs/js-core": "^15.0.0",
-    "@s-libs/micro-dash": "^15.0.0",
-    "@s-libs/ng-core": "^15.0.0",
-    "@s-libs/rxjs-core": "^15.0.0",
+    "@s-libs/js-core": "^16.0.0",
+    "@s-libs/micro-dash": "^16.0.0",
+    "@s-libs/ng-core": "^16.0.0",
+    "@s-libs/rxjs-core": "^16.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -38,7 +38,7 @@
     "@angular-devkit/build-angular": "^16.1.1",
     "@angular/cli": "~16.1.1",
     "@angular/compiler-cli": "^16.1.0",
-    "@s-libs/ng-dev": "^15.0.0",
+    "@s-libs/ng-dev": "^16.0.0",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
@@ -46,7 +46,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "prettier": "^2.0.2",
+    "prettier": "^2.8.8",
     "typescript": "~5.1.3"
   },
   "prettier": {

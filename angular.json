@@ -2,7 +2,6 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "yarn",
     "analytics": "213e457a-ea23-4ef4-9b7a-0498cde0e2e0"
   },
   "newProjectRoot": "projects",

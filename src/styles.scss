@@ -1,5 +1,5 @@
 @use "@angular/material" as mat;
-@use "node_modules/@s-libs/ng-mat-core/theming";
+@use "../node_modules/@s-libs/ng-mat-core/theming";
 
 @include theming.full-theming(
   $dark-palettes: (

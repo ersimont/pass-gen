@@ -2,7 +2,9 @@
   "hosting": [
     {
       "target": "pass-gen",
-      "source": ".",
+      // temporarily change "source" to "public" for https://github.com/angular/angularfire/issues/3463#issuecomment-1813543411
+      // "source": ".",
+      "public": "dist/pass-gen/browser",
       "frameworksBackend": {}
     }
   ]

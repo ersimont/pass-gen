@@ -1,12 +1,12 @@
 import { ApplicationConfig, isDevMode } from '@angular/core';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideServiceWorker } from '@angular/service-worker';
 import { provideMatIcons } from '@s-libs/ng-mat-core';
 import { icons } from './icons';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideAnimations(),
+    provideAnimationsAsync(),
     provideMatIcons(icons),
     provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),

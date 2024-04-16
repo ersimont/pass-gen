@@ -98,9 +98,19 @@
         "deploy": {
           "builder": "@angular/fire:deploy",
           "options": {
-            "version": 2,
-            "browserTarget": "pass-gen:build:production"
-          }
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "pass-gen:build:production",
+              "serveTarget": "pass-gen:serve:production"
+            },
+            "development": {
+              "buildTarget": "pass-gen:build:development",
+              "serveTarget": "pass-gen:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

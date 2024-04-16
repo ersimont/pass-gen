@@ -32,5 +32,7 @@ body {
   margin: 0;
 
   display: grid;
-  place-items: center;
+  grid-template-columns: minmax(auto, 400px);
+  align-items: center;
+  justify-content: center;
 }

@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    [type]="secret ? 'password' : 'text'"
+    [formControl]="control"
+  />
+</mat-form-field>

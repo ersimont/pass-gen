@@ -1,5 +1,5 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
-import { Generator, LETTERS } from './generator';
+import { NgForOf } from '@angular/common';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -7,7 +7,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
-import { NgForOf } from '@angular/common';
+import { Generator, LETTERS } from './generator';
+import { KeyComponent } from './key/key.component';
 
 const NUM_NORMAL_KEYS = 4;
 
@@ -16,6 +17,7 @@ const NUM_NORMAL_KEYS = 4;
   standalone: true,
   imports: [
     FormsModule,
+    KeyComponent,
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
@@ -37,13 +39,6 @@ export class AppComponent {
   numbers = true;
   special = false;
   show = false;
-
-  @ViewChildren('input')
-  set inputs(refs: QueryList<ElementRef>) {
-    setTimeout(() => {
-      refs.first.nativeElement.focus();
-    });
-  }
 
   getMessage(): string {
     if (!this.isConfirmed()) {

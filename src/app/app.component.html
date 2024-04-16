@@ -2,19 +2,24 @@
   <mat-card-content>
     <form (ngSubmit)="copy()">
       <ng-container *ngFor="let _ of iteree; index as i">
-        <mat-form-field>
-          <mat-label>Key {{ i + 1 }}</mat-label>
-          <input #input matInput name="key{{ i }}" [(ngModel)]="keys[i]" />
-        </mat-form-field>
+        <app-key
+          [label]="'Key ' + (i + 1)"
+          [name]="'key' + (i + 1)"
+          [(ngModel)]="keys[i]"
+        />
       </ng-container>
-      <mat-form-field>
-        <mat-label>Secret Key</mat-label>
-        <input matInput type="password" name="secret" [(ngModel)]="secret" />
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Confirm</mat-label>
-        <input matInput type="password" name="confirm" [(ngModel)]="confirm" />
-      </mat-form-field>
+      <app-key
+        label="Secret Key"
+        name="secret"
+        [secret]="true"
+        [(ngModel)]="secret"
+      />
+      <app-key
+        label="Confirm"
+        name="confirm"
+        [secret]="true"
+        [(ngModel)]="confirm"
+      />
       <mat-form-field>
         <mat-label>Length</mat-label>
         <input

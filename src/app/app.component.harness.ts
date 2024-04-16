@@ -1,18 +1,19 @@
+import { MatButtonHarness } from '@angular/material/button/testing';
+import { MatCheckboxHarness } from '@angular/material/checkbox/testing';
+import { MatInputHarness } from '@angular/material/input/testing';
 import { ComponentHarnessSuperclass } from '@s-libs/ng-dev';
 import { AppContext } from '../spec-helpers/app-context';
-import { MatButtonHarness } from '@angular/material/button/testing';
-import { MatInputHarness } from '@angular/material/input/testing';
-import { MatCheckboxHarness } from '@angular/material/checkbox/testing';
+import { KeyComponentHarness } from './key/key.component.harness';
 
 export class AppComponentHarness extends ComponentHarnessSuperclass {
   static hostSelector = 'app-root';
 
   async setKey(number: number, value: string): Promise<void> {
-    await this.#setInput(`key${number - 1}`, value);
+    await this.#setKey(`Key ${number}`, value);
   }
 
   async setSecret(value: string): Promise<void> {
-    await this.#setInput('secret', value);
+    await this.#setKey('Secret Key', value);
   }
 
   async setLength(length: number): Promise<void> {
@@ -35,10 +36,15 @@ export class AppComponentHarness extends ComponentHarnessSuperclass {
     return password;
   }
 
-  async #setInput(name: string, value: string): Promise<void> {
-    const key = await this.getHarness(
-      MatInputHarness.with({ selector: `[name="${name}"]` }),
-    );
+  async #setKey(label: string, value: string): Promise<void> {
+    const key = await this.getHarness(KeyComponentHarness.with({ label }));
     await key.setValue(value);
+  }
+
+  async #setInput(label: string, value: string): Promise<void> {
+    const input = await this.getHarness(
+      MatInputHarness.with({ selector: `[name="${label}"]` }),
+    );
+    await input.setValue(value);
   }
 }

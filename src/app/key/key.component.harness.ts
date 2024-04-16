@@ -1,8 +1,9 @@
-import { ComponentHarnessSuperclass } from '@s-libs/ng-dev';
-import { MatInputHarness } from '@angular/material/input/testing';
 import { BaseHarnessFilters, HarnessPredicate } from '@angular/cdk/testing';
 import { MatFormFieldHarness } from '@angular/material/form-field/testing';
+import { MatInputHarness } from '@angular/material/input/testing';
 import { assert } from '@s-libs/js-core';
+import { ComponentHarnessSuperclass } from '@s-libs/ng-dev';
+import { matButtonHarnessWithIcon } from '@s-libs/ng-mat-core';
 
 interface KeyComponentHarnessFilters extends BaseHarnessFilters {
   label?: string;
@@ -29,9 +30,21 @@ export class KeyComponentHarness extends ComponentHarnessSuperclass {
     return label;
   }
 
+  async getValue(): Promise<string> {
+    const input = await this.#getInput();
+    return input.getValue();
+  }
+
   async setValue(value: string): Promise<void> {
     const input = await this.#getInput();
     await input.setValue(value);
+  }
+
+  async clear(): Promise<void> {
+    const button = await this.getHarness(
+      matButtonHarnessWithIcon({ name: 'clear' }),
+    );
+    await button.click();
   }
 
   async #getInput(): Promise<MatInputHarness> {

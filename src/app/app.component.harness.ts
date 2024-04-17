@@ -26,7 +26,9 @@ export class AppComponentHarness extends ComponentHarnessSuperclass {
   }
 
   async getPassword(): Promise<string> {
-    const button = await this.getHarness(MatButtonHarness);
+    const button = await this.getHarness(
+      MatButtonHarness.with({ text: 'Copy' }),
+    );
     await button.click();
     const call = AppContext.getCurrent().writeTextController.expectOne(
       () => true,

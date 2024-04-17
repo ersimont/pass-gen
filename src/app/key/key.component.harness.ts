@@ -1,4 +1,5 @@
 import { BaseHarnessFilters, HarnessPredicate } from '@angular/cdk/testing';
+import { MatButtonHarness } from '@angular/material/button/testing';
 import { MatFormFieldHarness } from '@angular/material/form-field/testing';
 import { MatInputHarness } from '@angular/material/input/testing';
 import { assert } from '@s-libs/js-core';
@@ -40,11 +41,19 @@ export class KeyComponentHarness extends ComponentHarnessSuperclass {
     await input.setValue(value);
   }
 
+  async hasClearButton(): Promise<boolean> {
+    const button = await this.#getClearButton();
+    return !!button;
+  }
+
   async clear(): Promise<void> {
-    const button = await this.getHarness(
-      matButtonHarnessWithIcon({ name: 'clear' }),
-    );
+    const button = await this.#getClearButton();
+    assert(button, 'clear button is not showing');
     await button.click();
+  }
+
+  async #getClearButton(): Promise<MatButtonHarness | null> {
+    return this.getHarnessOrNull(matButtonHarnessWithIcon({ name: 'clear' }));
   }
 
   async #getInput(): Promise<MatInputHarness> {

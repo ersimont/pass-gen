@@ -1,18 +1,19 @@
 <mat-form-field>
   <mat-label>{{ label }}</mat-label>
   <input
-    #input
     matInput
     [type]="secret ? 'password' : 'text'"
     [formControl]="control"
   />
-  <button
-    type="button"
-    tabindex="-1"
-    mat-icon-button
-    matSuffix
-    (click)="input.value = ''"
-  >
-    <mat-icon svgIcon="clear" />
-  </button>
+  @if (control.value) {
+    <button
+      type="button"
+      tabindex="-1"
+      mat-icon-button
+      matSuffix
+      (click)="control.setValue('')"
+    >
+      <mat-icon svgIcon="clear" />
+    </button>
+  }
 </mat-form-field>

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -26,6 +26,18 @@ import {
 export class KeyComponent extends WrappedControlSuperclass<string> {
   @Input({ required: true }) label!: string;
   @Input() secret = false;
+  @Input() autofocus = false;
+
+  @ViewChild('input') input!: ElementRef<HTMLInputElement>;
 
   protected control = new FormControl('', { nonNullable: true });
+
+  constructor() {
+    super();
+    setTimeout(() => {
+      if (this.autofocus) {
+        this.input.nativeElement.focus();
+      }
+    });
+  }
 }

@@ -1,10 +1,11 @@
 <mat-card appearance="outlined">
   <mat-card-content>
-    <form (ngSubmit)="copy()">
+    <form autocapitalize="off" (ngSubmit)="copy()">
       <ng-container *ngFor="let _ of iteree; index as i">
         <app-key
           [label]="'Key ' + (i + 1)"
           [name]="'key' + (i + 1)"
+          [autofocus]="i === 0"
           [(ngModel)]="keys[i]"
         />
       </ng-container>

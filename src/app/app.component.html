@@ -1,7 +1,7 @@
 <mat-card appearance="outlined">
   <mat-card-content>
     <form autocapitalize="off" (ngSubmit)="copy()">
-      @for (_ of iteree; track _; let i = $index) {
+      @for (_ of iteree; track i; let i = $index) {
         <app-key
           [label]="'Key ' + (i + 1)"
           [name]="'key' + (i + 1)"

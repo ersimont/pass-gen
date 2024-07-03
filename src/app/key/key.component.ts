@@ -1,4 +1,10 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  Input,
+  ViewChild,
+} from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -20,6 +26,7 @@ import {
   templateUrl: './key.component.html',
   styleUrl: './key.component.scss',
   providers: [provideValueAccessor(KeyComponent)],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class KeyComponent extends WrappedControlSuperclass<string> {
   @Input({ required: true }) label!: string;

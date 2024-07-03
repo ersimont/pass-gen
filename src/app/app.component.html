@@ -1,14 +1,14 @@
 <mat-card appearance="outlined">
   <mat-card-content>
     <form autocapitalize="off" (ngSubmit)="copy()">
-      <ng-container *ngFor="let _ of iteree; index as i">
+      @for (_ of iteree; track _; let i = $index) {
         <app-key
           [label]="'Key ' + (i + 1)"
           [name]="'key' + (i + 1)"
           [autofocus]="i === 0"
           [(ngModel)]="keys[i]"
         />
-      </ng-container>
+      }
       <app-key
         label="Secret Key"
         name="secret"

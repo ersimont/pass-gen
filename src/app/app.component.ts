@@ -12,21 +12,20 @@ import { KeyComponent } from './key/key.component';
 const NUM_NORMAL_KEYS = 4;
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    FormsModule,
-    KeyComponent,
-    MatButtonModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatListModule,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-root',
+    imports: [
+        FormsModule,
+        KeyComponent,
+        MatButtonModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatListModule,
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   iteree = Array(NUM_NORMAL_KEYS);

@@ -15,18 +15,17 @@ import {
 } from '@s-libs/ng-core';
 
 @Component({
-  selector: 'app-key',
-  standalone: true,
-  imports: [
-    MatButtonModule,
-    MatIconModule,
-    MatInputModule,
-    ReactiveFormsModule,
-  ],
-  templateUrl: './key.component.html',
-  styleUrl: './key.component.scss',
-  providers: [provideValueAccessor(KeyComponent)],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-key',
+    imports: [
+        MatButtonModule,
+        MatIconModule,
+        MatInputModule,
+        ReactiveFormsModule,
+    ],
+    templateUrl: './key.component.html',
+    styleUrl: './key.component.scss',
+    providers: [provideValueAccessor(KeyComponent)],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class KeyComponent extends WrappedControlSuperclass<string> {
   @Input({ required: true }) label!: string;

@@ -1,8 +1,6 @@
 {
   "name": "Password Generator",
   "short_name": "Pass Gen",
-  "theme_color": "#1d1b1e",
-  "background_color": "#1d1b1e",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

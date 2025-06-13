@@ -17,8 +17,6 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/pass-gen",
-            "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
@@ -29,8 +27,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
-            "scripts": []
+            "styles": ["src/styles.scss"]
           },
           "configurations": {
             "production": {
@@ -42,8 +39,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all",
@@ -84,8 +81,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
-            "scripts": []
+            "styles": ["src/styles.scss"]
           }
         },
         "lint": {
@@ -93,23 +89,6 @@
           "options": {
             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "version": 2
-          },
-          "configurations": {
-            "production": {
-              "buildTarget": "pass-gen:build:production",
-              "serveTarget": "pass-gen:serve:production"
-            },
-            "development": {
-              "buildTarget": "pass-gen:build:development",
-              "serveTarget": "pass-gen:serve:development"
-            }
-          },
-          "defaultConfiguration": "production"
         }
       }
     }
@@ -120,34 +99,10 @@
     },
     "@angular-eslint/schematics:library": {
       "setParserOptionsProject": true
-    },
-    "@schematics/angular:component": {
-      "type": "component"
-    },
-    "@schematics/angular:directive": {
-      "type": "directive"
-    },
-    "@schematics/angular:service": {
-      "type": "service"
-    },
-    "@schematics/angular:guard": {
-      "typeSeparator": "."
-    },
-    "@schematics/angular:interceptor": {
-      "typeSeparator": "."
-    },
-    "@schematics/angular:module": {
-      "typeSeparator": "."
-    },
-    "@schematics/angular:pipe": {
-      "typeSeparator": "."
-    },
-    "@schematics/angular:resolver": {
-      "typeSeparator": "."
     }
   },
   "cli": {
     "analytics": "213e457a-ea23-4ef4-9b7a-0498cde0e2e0",
-    "schematicCollections": ["@angular-eslint/schematics"]
+    "schematicCollections": ["angular-eslint"]
   }
 }

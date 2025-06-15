@@ -1,24 +1,16 @@
 @use "sass:map";
 @use "@angular/material" as mat;
-@use "./to-replace/ng-mat-core/theming";
 
-@include theming.full-m3-theming(
-  $dark-palettes: (
-    primary: mat.$violet-palette,
-  ),
-  $light-palettes: (
-    primary: mat.$magenta-palette,
-  ),
-  $modules: (
-    "core",
-    "button",
-    "card",
-    "checkbox",
-    "form-field",
-    "input",
-    "list",
-  )
-);
+html {
+  color-scheme: light dark;
+  @include mat.theme(
+    (
+      color: mat.$violet-palette,
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
 
 .mono-box {
   @include mat.checkbox-typography(

@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "deploy": "ng deploy",
+    "deploy": "firebase deploy --only hosting",
     "prettier-all": "prettier --write \"**/*.{css,html,js,json,md,scss,ts,yml}\"",
     "presource-map-explorer": "ng build --source-map",
     "source-map-explorer": "source-map-explorer 'dist/pass-gen/browser/*.js'"
@@ -21,7 +21,6 @@
     "@angular/common": "^20.0.0",
     "@angular/compiler": "^20.0.0",
     "@angular/core": "^20.0.0",
-    "@angular/fire": "^20.0.1",
     "@angular/forms": "^20.0.0",
     "@angular/material": "20.0",
     "@angular/platform-browser": "^20.0.0",

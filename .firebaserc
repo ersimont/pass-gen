@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "simonton-pass-gen": {
-      "hosting": {
-        "pass-gen": [
-          "simonton-pass-gen"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "simonton-pass-gen"
   }
